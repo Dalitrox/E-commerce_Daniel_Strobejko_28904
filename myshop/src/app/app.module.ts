@@ -1,12 +1,13 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './components/landing/landing.component';
 import { ProductsComponent } from './components/products/products.component';
+import { PanelTopComponent } from './components/panel-top/panel-top.component';
 
 const appRoutes: Routes = [
   { path: 'products', component: ProductsComponent },
@@ -17,12 +18,14 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    LandingComponent,
     ProductsComponent,
-    LandingComponent
+    PanelTopComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],
