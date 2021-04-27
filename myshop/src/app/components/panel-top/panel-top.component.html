@@ -1,7 +1,9 @@
-<div>
+<div class="lists">
     <div style="display: flex;flex-direction: row;">
-        <img src="https://via.placeholder.com/100" routerLink="/landing" alt="">
-        <h2>Sklep z softłerem</h2>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
 
     <button routerLink="/adm_dashboard">Panel Administratora</button>
@@ -11,7 +13,7 @@
         <button (click)="this.mainService.getProducts(this.mainService.productsRequest)" routerLink="/products">Szukaj Produktu</button>
     </div>
     <div>
-        <button id="cartBtn" routerLink="/cart">
+        <button id="cartBtn" routerLink="/cart">Koszyk:
             {{getCartQuanity()}}
         </button>
     </div>

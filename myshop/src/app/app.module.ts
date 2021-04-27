@@ -12,6 +12,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { MenuComponent } from './components/admin/menu/menu.component';
 import { AdmProductsComponent } from './components/admin/adm-products/adm-products.component';
+import { ChartsModule } from 'ng2-charts';
+import { AdmOrdersComponent } from './components/admin/adm-orders/adm-orders.component';
 
 const appRoutes: Routes = [
   { path: 'cart', component: CartComponent },
@@ -19,6 +21,7 @@ const appRoutes: Routes = [
   { path: 'landing', component: LandingComponent },
   { path: 'adm_dashboard', component: DashboardComponent },
   { path: 'adm_products', component: AdmProductsComponent },
+  { path: 'adm_orders', component: AdmOrdersComponent },
   { path: '', redirectTo: '/landing', pathMatch: 'full' }
 ];
 
@@ -31,13 +34,15 @@ const appRoutes: Routes = [
     CartComponent,
     DashboardComponent,
     MenuComponent,
-    AdmProductsComponent
+    AdmProductsComponent,
+    AdmOrdersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

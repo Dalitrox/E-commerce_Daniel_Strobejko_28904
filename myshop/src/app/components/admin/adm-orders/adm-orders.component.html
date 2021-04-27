@@ -1,0 +1,35 @@
+<div style="display: flex; flex-direction: row;">
+  <app-menu class="app-menu"></app-menu>
+  <div class="content" style="width: 100%">
+    <div class="content-header">
+      <h2>Zamówienia</h2>
+      <hr>
+      <div style="display: flex; justify-content: center;">
+        <input type="text" [(ngModel)]="this.mainService.ordersRequest.name">
+        <button (click)="this.mainService.getOrders(this.mainService.ordersRequest)" routerLink="/adm_orders">Szukaj</button>
+      </div>
+            <table class="lista" style="margin: 0 auto;" id="ordersTable">
+                <thead *ngIf="this.mainService.orders">
+                  <tr>
+                    <th>ID</th>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Email</th>
+                    <th>Telefon</th>
+                    <th>Cena</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let order of this.mainService.orders?.orders">
+                    <td>{{order.id}}</td>
+                    <td>{{order.first_name}}</td>
+                    <td>{{order.last_name}}</td>
+                    <td>{{order.email}}</td>
+                    <td>{{order.phone}}</td>
+                    <td>{{order.price}}</td>
+                  </tr>
+                </tbody>
+            </table>
+      </div>
+  </div>
+</div>

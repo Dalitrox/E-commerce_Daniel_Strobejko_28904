@@ -1,11 +1,19 @@
 <div style="display: flex; flex-direction: row;">
-    <app-menu></app-menu>
+    <app-menu class="app-menu"></app-menu>
     <div class="content" style="width: 100%">
         <div class="content-header">
             <h2>DASHBOARD</h2>
         </div>
-        <div class="content-container">
-            <h2>rzeczy</h2>
+        <div style="width: 90%;">
+          <div style="display: block">
+            <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+          </canvas>
+          </div>
         </div>
     </div>
 </div>

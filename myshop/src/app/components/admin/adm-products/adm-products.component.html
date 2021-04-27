@@ -1,5 +1,5 @@
 <div style="display: flex; flex-direction: row;">
-  <app-menu></app-menu>
+  <app-menu class="app-menu"></app-menu>
   <div class="content" style="width: 100%">
       <div class="content-header">
           <h2>Products</h2>
@@ -44,7 +44,7 @@
             </thead>
             <tbody>
               <ng-container *ngFor="let product of this.mainService.products?.productsTable">
-                <tr style="background-color: whitesmoke;">
+                <tr style="background-color: rgb(142, 231, 224);">
                   <td><img src="{{product.thumbnail}}" alt=""></td>
                   <td>
                     <ul>
